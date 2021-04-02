@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableConfigurationProperties(BounterProperties.class)
-@ConditionalOnClass(BounterService.class)
+@ConditionalOnProperty(name = "bounter.name")
 public class BounterAutoConfiguration {
 
     @Autowired
